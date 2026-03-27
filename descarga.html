@@ -7,33 +7,40 @@
 <style>
 body{
 margin:0;
-font-family:Arial;
-background:#0f172a;
+font-family:-apple-system,Arial;
+background:linear-gradient(180deg,#020617,#0f172a);
 color:white;
 text-align:center;
 }
 
 .box{
-margin-top:100px;
+margin-top:120px;
+padding:20px;
 }
 
 input{
-padding:12px;
-border-radius:10px;
+padding:14px;
+border-radius:14px;
 border:none;
-width:80%;
-margin-top:10px;
+width:85%;
+margin-top:15px;
+font-size:16px;
 }
 
 button{
-padding:12px;
+padding:14px;
 border:none;
-border-radius:10px;
-background:#22c55e;
+border-radius:14px;
+background:linear-gradient(45deg,#22c55e,#16a34a);
 color:white;
-margin-top:10px;
-width:80%;
+margin-top:15px;
+width:85%;
 font-size:16px;
+}
+
+.error{
+color:#ef4444;
+margin-top:10px;
 }
 </style>
 </head>
@@ -45,18 +52,27 @@ font-size:16px;
 <p>Introduce tu código</p>
 
 <input id="code" placeholder="Código de acceso">
-<br>
 <button onclick="checkCode()">Entrar</button>
+
+<p id="error" class="error"></p>
 </div>
 
 <script>
+var codigosValidos = [
+"VIP123",
+"PRO777",
+"APP2026",
+"ACCESO999"
+];
+
 function checkCode(){
 var code = document.getElementById("code").value;
+var error = document.getElementById("error");
 
-if(code === "PRO123"){
+if(codigosValidos.includes(code)){
 window.location.href = "apps.html";
 }else{
-alert("Código incorrecto");
+error.innerText = "Código incorrecto";
 }
 }
 </script>
