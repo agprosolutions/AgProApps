@@ -13,16 +13,25 @@ color:white;
 text-align:center;
 }
 
-.box{margin-top:100px;}
+.box{
+margin-top:100px;
+padding:20px;
+}
 
-button{
+.btn{
 padding:15px;
 border:none;
 border-radius:14px;
 background:#22c55e;
 color:white;
 font-size:18px;
-width:80%;
+width:85%;
+margin-top:10px;
+}
+
+.secondary{
+background:#111827;
+border:1px solid #1e293b;
 }
 </style>
 </head>
@@ -30,11 +39,15 @@ width:80%;
 <body>
 
 <div class="box">
-<h1>✅ Pago recibido</h1>
-<p>Accede a tus apps ahora</p>
+<h1>✅ Pago realizado</h1>
+<p>Presiona el botón para recibir tu código</p>
+
+<a href="https://wa.me/19392730722?text=Hola%20ya%20realic%C3%A9%20el%20pago%20en%20ProApps%20Store%20y%20quiero%20mi%20c%C3%B3digo%20de%20acceso">
+<button class="btn">📲 Obtener código por WhatsApp</button>
+</a>
 
 <a href="descarga.html">
-<button>Continuar</button>
+<button class="btn secondary">🔐 Ya tengo código</button>
 </a>
 
 </div>
