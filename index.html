@@ -7,7 +7,7 @@
 <style>
 body{
 margin:0;
-font-family:-apple-system,Arial;
+font-family:Arial;
 background:#020617;
 color:white;
 }
@@ -15,29 +15,26 @@ color:white;
 /* HEADER */
 .header{
 padding:20px;
-font-size:24px;
+font-size:26px;
 font-weight:bold;
+text-align:center;
 }
 
-/* GRID */
+/* LISTA */
 .container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:15px;
 padding:15px;
 }
 
-/* CARD */
+/* CARD GRANDE */
 .card{
 background:#111827;
 border-radius:20px;
-padding:15px;
-box-shadow:0 10px 20px rgba(0,0,0,0.6);
-transition:0.2s;
-}
-
-.card:hover{
-transform:scale(1.03);
+padding:20px;
+margin-bottom:15px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+box-shadow:0 8px 20px rgba(0,0,0,0.5);
 }
 
 /* ICON */
@@ -45,29 +42,30 @@ transform:scale(1.03);
 width:60px;
 height:60px;
 border-radius:15px;
-margin-bottom:10px;
+margin-right:15px;
 }
 
 /* TEXT */
+.info{
+flex:1;
+}
+
 .name{
-font-size:15px;
+font-size:18px;
 font-weight:bold;
 }
 
 .desc{
-font-size:12px;
+font-size:13px;
 color:#9ca3af;
-margin:6px 0;
 }
 
 /* BUTTON */
 .btn{
-margin-top:10px;
-width:100%;
-padding:10px;
+padding:12px 15px;
 border:none;
 border-radius:12px;
-background:linear-gradient(45deg,#22c55e,#16a34a);
+background:#22c55e;
 color:white;
 font-size:14px;
 }
@@ -81,107 +79,121 @@ font-size:14px;
 
 <div class="container">
 
-<!-- 1 -->
-<div class="card">
-<img class="icon" src="https://img.icons8.com/color/96/trophy.png">
-<div class="name">AK47 Sports</div>
-<div class="desc">Eventos deportivos</div>
-<a href="descarga.html"><button class="btn">Instalar</button></a>
-</div>
-
-<!-- 2 -->
-<div class="card">
-<img class="icon" src="https://img.icons8.com/color/96/android-os.png">
-<div class="name">Aptoide TV</div>
-<div class="desc">Apps para TV</div>
-<a href="descarga.html"><button class="btn">Instalar</button></a>
-</div>
-
-<!-- 3 -->
-<div class="card">
-<img class="icon" src="https://img.icons8.com/color/96/video.png">
-<div class="name">FilmApp</div>
-<div class="desc">Películas HD</div>
-<a href="descarga.html"><button class="btn">Instalar</button></a>
-</div>
-
-<!-- 4 -->
-<div class="card">
-<img class="icon" src="https://img.icons8.com/color/96/film.png">
-<div class="name">FilmPlus</div>
-<div class="desc">Series y películas</div>
-<a href="descarga.html"><button class="btn">Instalar</button></a>
-</div>
-
-<!-- 5 -->
+<!-- APP -->
 <div class="card">
 <img class="icon" src="https://img.icons8.com/color/96/movie-projector.png">
+<div class="info">
 <div class="name">FlixVision</div>
-<div class="desc">Streaming completo</div>
+<div class="desc">Películas y series</div>
+</div>
 <a href="descarga.html"><button class="btn">Instalar</button></a>
 </div>
 
-<!-- 6 -->
-<div class="card">
-<img class="icon" src="https://img.icons8.com/color/96/fire-element.png">
-<div class="name">Magma TV</div>
-<div class="desc">TV internacional</div>
-<a href="descarga.html"><button class="btn">Instalar</button></a>
-</div>
-
-<!-- 7 -->
-<div class="card">
-<img class="icon" src="https://img.icons8.com/color/96/clapperboard.png">
-<div class="name">MXL Movies</div>
-<div class="desc">Películas organizadas</div>
-<a href="descarga.html"><button class="btn">Instalar</button></a>
-</div>
-
-<!-- 8 -->
-<div class="card">
-<img class="icon" src="https://img.icons8.com/color/96/retro-tv.png">
-<div class="name">MXL TV</div>
-<div class="desc">TV en vivo</div>
-<a href="descarga.html"><button class="btn">Instalar</button></a>
-</div>
-
-<!-- 9 -->
-<div class="card">
-<img class="icon" src="https://img.icons8.com/color/96/flash.png">
-<div class="name">OnStream</div>
-<div class="desc">Streaming rápido</div>
-<a href="descarga.html"><button class="btn">Instalar</button></a>
-</div>
-
-<!-- 10 -->
-<div class="card">
-<img class="icon" src="https://img.icons8.com/color/96/musical-notes.png">
-<div class="name">PlayerPro</div>
-<div class="desc">Reproductor multimedia</div>
-<a href="descarga.html"><button class="btn">Instalar</button></a>
-</div>
-
-<!-- 11 -->
-<div class="card">
-<img class="icon" src="https://img.icons8.com/color/96/popcorn.png">
-<div class="name">StreamFlix</div>
-<div class="desc">Catálogo tipo Netflix</div>
-<a href="descarga.html"><button class="btn">Instalar</button></a>
-</div>
-
-<!-- 12 -->
-<div class="card">
-<img class="icon" src="https://img.icons8.com/color/96/radio.png">
-<div class="name">TV Clásica</div>
-<div class="desc">Canales clásicos</div>
-<a href="descarga.html"><button class="btn">Instalar</button></a>
-</div>
-
-<!-- 13 -->
 <div class="card">
 <img class="icon" src="https://img.icons8.com/color/96/tv.png">
+<div class="info">
 <div class="name">XuperTV</div>
-<div class="desc">TV + deportes</div>
+<div class="desc">TV en vivo</div>
+</div>
+<a href="descarga.html"><button class="btn">Instalar</button></a>
+</div>
+
+<div class="card">
+<img class="icon" src="https://img.icons8.com/color/96/flash.png">
+<div class="info">
+<div class="name">OnStream</div>
+<div class="desc">Streaming rápido</div>
+</div>
+<a href="descarga.html"><button class="btn">Instalar</button></a>
+</div>
+
+<div class="card">
+<img class="icon" src="https://img.icons8.com/color/96/popcorn.png">
+<div class="info">
+<div class="name">StreamFlix</div>
+<div class="desc">Tipo Netflix</div>
+</div>
+<a href="descarga.html"><button class="btn">Instalar</button></a>
+</div>
+
+<div class="card">
+<img class="icon" src="https://img.icons8.com/color/96/trophy.png">
+<div class="info">
+<div class="name">AK47 Sports</div>
+<div class="desc">Eventos deportivos</div>
+</div>
+<a href="descarga.html"><button class="btn">Instalar</button></a>
+</div>
+
+<div class="card">
+<img class="icon" src="https://img.icons8.com/color/96/android-os.png">
+<div class="info">
+<div class="name">Aptoide TV</div>
+<div class="desc">Apps para TV</div>
+</div>
+<a href="descarga.html"><button class="btn">Instalar</button></a>
+</div>
+
+<div class="card">
+<img class="icon" src="https://img.icons8.com/color/96/video.png">
+<div class="info">
+<div class="name">FilmApp</div>
+<div class="desc">Películas HD</div>
+</div>
+<a href="descarga.html"><button class="btn">Instalar</button></a>
+</div>
+
+<div class="card">
+<img class="icon" src="https://img.icons8.com/color/96/film.png">
+<div class="info">
+<div class="name">FilmPlus</div>
+<div class="desc">Series y películas</div>
+</div>
+<a href="descarga.html"><button class="btn">Instalar</button></a>
+</div>
+
+<div class="card">
+<img class="icon" src="https://img.icons8.com/color/96/fire-element.png">
+<div class="info">
+<div class="name">Magma TV</div>
+<div class="desc">TV internacional</div>
+</div>
+<a href="descarga.html"><button class="btn">Instalar</button></a>
+</div>
+
+<div class="card">
+<img class="icon" src="https://img.icons8.com/color/96/clapperboard.png">
+<div class="info">
+<div class="name">MXL Movies</div>
+<div class="desc">Películas organizadas</div>
+</div>
+<a href="descarga.html"><button class="btn">Instalar</button></a>
+</div>
+
+<div class="card">
+<img class="icon" src="https://img.icons8.com/color/96/retro-tv.png">
+<div class="info">
+<div class="name">MXL TV</div>
+<div class="desc">TV en vivo</div>
+</div>
+<a href="descarga.html"><button class="btn">Instalar</button></a>
+</div>
+
+<div class="card">
+<img class="icon" src="https://img.icons8.com/color/96/musical-notes.png">
+<div class="info">
+<div class="name">PlayerPro</div>
+<div class="desc">Reproductor multimedia</div>
+</div>
+<a href="descarga.html"><button class="btn">Instalar</button></a>
+</div>
+
+<div class="card">
+<img class="icon" src="https://img.icons8.com/color/96/radio.png">
+<div class="info">
+<div class="name">TV Clásica</div>
+<div class="desc">Canales clásicos</div>
+</div>
 <a href="descarga.html"><button class="btn">Instalar</button></a>
 </div>
 
