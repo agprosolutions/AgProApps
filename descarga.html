@@ -48,7 +48,8 @@ width:80%;
 
 <p style="margin-top:20px;">¿No tienes acceso?</p>
 
-<a href="https://www.paypal.com/paypalme/anto7004/2">
+<!-- 🔥 BOTÓN PAYPAL CORRECTO -->
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=anto7004@hotmail.com&amount=2&currency_code=USD&item_name=ProApps&return=https://pro-appstore.github.io/ProApps/verificar.html">
 <button>💳 Comprar acceso</button>
 </a>
 
@@ -65,7 +66,6 @@ function checkCode(){
 var code = document.getElementById("code").value;
 
 if(codigosValidos.includes(code)){
-// 🔥 CAMBIO IMPORTANTE AQUÍ
 window.location.href = "apps2.html";
 }else{
 alert("Código incorrecto");
