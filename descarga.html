@@ -13,7 +13,7 @@ color:white;
 text-align:center;
 }
 
-.box{margin-top:100px;}
+.box{margin-top:80px;}
 
 input{
 padding:12px;
@@ -27,11 +27,30 @@ button{
 padding:12px;
 border:none;
 border-radius:10px;
-background:#22c55e;
-color:white;
 margin-top:10px;
 width:80%;
 cursor:pointer;
+font-size:16px;
+}
+
+/* PAYPAL */
+.paypal{
+background:#0070ba;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+}
+
+/* ATH */
+.qr{
+margin-top:25px;
+}
+
+.qr img{
+width:220px;
+border-radius:12px;
 }
 </style>
 
@@ -47,12 +66,34 @@ cursor:pointer;
 <input id="code" placeholder="Código">
 <button onclick="checkCode()">Entrar</button>
 
-<p style="margin-top:20px;">¿No tienes acceso?</p>
+<p style="margin-top:25px;">¿No tienes acceso?</p>
 
-<!-- 🔥 BOTÓN PAYPAL FIX (ABRE CHECKOUT REAL) -->
+<!-- 🔥 PAYPAL PRO -->
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=anto7004@hotmail.com&amount=2&currency_code=USD&item_name=ProApps&return=https://pro-appstore.github.io/ProApps/verificar.html" target="_blank">
-<button>💳 Comprar acceso</button>
+<button class="paypal">
+<img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" width="24">
+Pagar con PayPal
+</button>
 </a>
+
+<!-- 🔥 ATH MOVIL -->
+<div class="qr">
+<p>O paga con ATH Móvil</p>
+
+<img src="https://chat.openai.com/mnt/data/F2B4E3A9-B971-446F-A358-764BEC45CB79.jpeg">
+
+<p style="font-size:13px;color:#9ca3af;">
+Escanea el QR y realiza el pago
+</p>
+
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/19392730722?text=Hola%20ya%20realic%C3%A9%20el%20pago%20por%20ATH%20en%20ProApps%20y%20quiero%20mi%20c%C3%B3digo%20de%20acceso">
+<button style="background:#25D366;color:white;margin-top:15px;">
+📲 Ya pagué por ATH
+</button>
+</a>
+
+</div>
 
 </div>
 
