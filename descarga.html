@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Acceso</title>
+<title>Acceso concedido</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -13,71 +13,71 @@ color:white;
 text-align:center;
 }
 
-.box{margin-top:100px;}
-
-input{
-padding:12px;
-border-radius:10px;
-border:none;
-width:80%;
-margin-top:10px;
+.box{
+margin-top:100px;
+padding:20px;
 }
 
-button{
-padding:12px;
+.code{
+font-size:28px;
+background:#111827;
+padding:15px;
+border-radius:12px;
+margin:20px auto;
+width:80%;
+}
+
+.btn{
+padding:15px;
 border:none;
-border-radius:10px;
+border-radius:14px;
 background:#22c55e;
 color:white;
+font-size:18px;
+width:85%;
 margin-top:10px;
-width:80%;
-cursor:pointer;
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="box">
 
-<h1>🔐 Acceso requerido</h1>
-<p>Introduce tu código</p>
+<h1>✅ Pago confirmado</h1>
+<p>Tu código de acceso es:</p>
 
-<input id="code" placeholder="Código">
-<button onclick="checkCode()">Entrar</button>
+<div class="code" id="codigo"></div>
 
-<p style="margin-top:20px;">¿No tienes acceso?</p>
+<button class="btn" onclick="copiar()">📋 Copiar código</button>
 
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=anto7004@hotmail.com&amount=2&currency_code=USD&item_name=ProApps&return=https://pro-appstore.github.io/ProApps/verificar.html" target="_blank">
-<button>💳 Comprar acceso</button>
+<a href="descarga.html">
+<button class="btn">🔐 Ir a ingresar código</button>
 </a>
 
 </div>
 
 <script>
 
-//////////////////////////
-// 🔥 CAMBIA TODO AQUÍ 🔥
-//////////////////////////
-
-var codigosValidos = [
+// 🔥 CAMBIA LOS CÓDIGOS AQUÍ
+var codigos = [
 "VIP123",
 "PRO777",
-"APP2026"
+"APP2026",
+"CLIENTE1",
+"CLIENTE2"
 ];
 
-//////////////////////////
+// escoger uno al azar
+var codigoRandom = codigos[Math.floor(Math.random() * codigos.length)];
+document.getElementById("codigo").innerText = codigoRandom;
 
-function checkCode(){
-var code = document.getElementById("code").value;
+// copiar
+function copiar(){
+navigator.clipboard.writeText(codigoRandom);
+alert("Código copiado");
+}
 
-if(codigosValidos.includes(code)){
-window.location.href = "apps2.html";
-}else{
-alert("Código incorrecto");
-}
-}
 </script>
 
 </body>
